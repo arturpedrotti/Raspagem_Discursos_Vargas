@@ -1,106 +1,85 @@
-# Raspagem de Discursos de Getúlio Vargas
+# 📜 Getúlio Vargas Speech Scraper
 
-## 📜 Descrição
+This project automates the scraping and downloading of speeches by former Brazilian president Getúlio Vargas from government websites. It uses **Selenium** for web navigation and **BeautifulSoup** for PDF link extraction, downloading the files to a local directory.
 
-Este programa foi desenvolvido para fazer a raspagem de discursos do ex-presidente brasileiro Getúlio Vargas. O código é parte do projeto hospedado em [este repositório GitHub](https://github.com/arturpedrotti/Raspagem_Discursos_Vargas). O programa utiliza Selenium para navegar pelos sites e BeautifulSoup para extrair os links dos discursos em PDF. Posteriormente, esses PDFs são baixados e armazenados em uma pasta definida.
+---
 
-### 👨‍💻 Autores
+## 🚀 Features
 
-- Artur Pedrotti Grochau
-- Bruno Alexandre Rodrigues do Nascimento Gonçalves
-- Matheus Guimarães Ferreira Rocha
-- Pedro Henrique Oliveira da Cunha
+- Full automation of browser navigation using Selenium
+- PDF link extraction with BeautifulSoup
+- Batch download of all available speeches
+- Compatible with Linux/macOS and Windows
+- Optional virtual environment setup
+- Guidance for unzipping collected files
 
-## 🛠 Pré-requisitos
+---
+
+## 🛠 Requirements
 
 - Python 3.x
 - pip
-- Google Chrome instalado (o WebDriver é para o Chrome)
+- Google Chrome
+- ChromeDriver compatible with your Chrome version
 
-## 🚀 Instalação e Configuração
+Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-### Linux/Mac
+---
 
-1. **Clone o Repositório**
-    ```bash
-    git clone https://github.com/arturpedrotti/Raspagem_Discursos_Vargas.git
-    ```
+## ⚙️ Usage
 
-2. **Entre no Diretório do Projeto**
-    ```bash
-    cd Raspagem_Discursos_Vargas
-    ```
+To run the script:
+```bash
+python seleniumScrapingfin.py
+```
 
-3. **Ambiente Virtual (Opcional)**
-    ```bash
-    python3 -m venv venv
-    ```
+Ensure the `downloads` folder is clear before running to avoid conflicts.
 
-4. **Ative o Ambiente Virtual**
-    ```bash
-    source venv/bin/activate
-    ```
+---
 
-5. **Instale as Dependências**
-    ```bash
-    pip install -r requirements.txt
-    ```
+## 💡 Example Use Case
 
-### Windows
+Researchers or historians can use this tool to automate the collection of speeches for textual analysis, natural language processing, or archival purposes.
 
-1. **Clone o Repositório**
-    ```powershell
-    git clone https://github.com/arturpedrotti/Raspagem_Discursos_Vargas.git
-    ```
+---
 
-2. **Entre no Diretório do Projeto**
-    ```powershell
-    cd Raspagem_Discursos_Vargas
-    ```
+## 📦 Extracting ZIP Files
 
-3. **Ambiente Virtual (Opcional)**
-    ```powershell
-    python -m venv venv
-    ```
+**Linux/macOS:**
+```bash
+unzip -d output_dir path/to/file.zip
+```
 
-4. **Ative o Ambiente Virtual**
-    ```powershell
-    .\venv\Scripts\Activate
-    ```
+**Windows:**
 
-5. **Instale as Dependências**
-    ```powershell
-    pip install -r requirements.txt
-    ```
+Use:
+- File Explorer
+- PowerShell: `Expand-Archive -Path path\to\file.zip -DestinationPath output_dir`
+- WinRAR or 7-Zip
 
-## 🚦 Como Usar
+---
 
-1. **Execute o Script Python**
-    ```bash
-    python3 seleniumScrapingfin.py  # Linux/Mac
-    python seleniumScrapingfin.py   # Windows
-    ```
+## 👤 Author
 
-## 📦 Descompactando os PDFs Baixados
+Developed primarily by **Artur Pedrotti Grochau**, with academic collaboration:
 
-### Linux/Mac
+- Bruno Alexandre Rodrigues do Nascimento Gonçalves  
+- Matheus Guimarães Ferreira Rocha  
+- Pedro Henrique Oliveira da Cunha  
 
-- Utilize o comando `unzip -d 'nomedir' caminho/para/o/arquivo.zip` para descompactar o arquivo ZIP em um diretório especificado.
+This was part of a university data collection project.
 
-### Windows
+---
 
-- Use softwares como WinRAR ou 7-Zip, ou utilize o comando `Expand-Archive` no PowerShell.
+## 📝 License
 
-## ⚠️ Advertências
+This project is licensed under the MIT License. See `LICENSE` for details.
 
-- Este script pode não funcionar corretamente em conexões de internet lentas. O tempo de download dos PDFs pode variar.
-- Certifique-se de que a pasta de download esteja vazia ou de que nenhum arquivo nela conflite com os nomes dos arquivos baixados pelo programa.
+---
 
-## 🤝 Contribuição
+## 🤝 Contributions
 
-Para contribuir com este projeto, por favor, faça um fork do repositório e crie uma Pull Request.
-
-## 📝 Licença
-
-MIT
-
+Pull requests are welcome. Please fork the repository and submit your proposal.
